@@ -96,6 +96,12 @@ ansible --list-hosts webserver
 ```
  ansible-playbook playbook/hostname.yml
 ```
+ ansible -a "service nginx status" lb01
+ ansible -a "service apache2 status" app01
+ ansible -a "service apache2 status" app02
+ ansible -a "service mysql status" db01
+
+
 
 
 
