@@ -1,0 +1,5 @@
+# check status of the servers
+---
+- hosts: all
+  become: true
+  

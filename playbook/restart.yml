@@ -1,0 +1,19 @@
+# Restart the applications
+---
+- hosts: database
+  become: true
+  tasks:
+    - name: restart the database
+      service: name=mysql state=restarted   
+
+- hosts: webserver
+  become: true
+  tasks:  
+    - name: restart the app instances
+      service: name=apache2 state=restarted
+
+- hosts: loadbalancer
+  become: true  
+  tasks:  
+    - name: restart the load balancer instance
+      service: name=nginx state=restarted

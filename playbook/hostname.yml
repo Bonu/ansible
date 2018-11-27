@@ -1,0 +1,8 @@
+#List the hostname
+---
+- hosts: all
+  tasks:
+    - command: ping
+      command: echo Hi
+      command: hostname
+

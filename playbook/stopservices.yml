@@ -1,0 +1,21 @@
+#stops all the services
+---
+- hosts: loadbalancer
+  become: true
+  tasks:
+    - name: stop the nginx service
+      service: name=nginx state=stopped
+
+- hosts: webserver
+  become: true
+  tasks:
+    - name: ensure apache2 server stopped
+      service: name=apache2 state=stopped
+
+- hosts: mysql
+  become: true
+  tasks:
+    - name: ensure mysql stopped
+      service: name=mysql state=stopped
+
+
