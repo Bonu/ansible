@@ -105,4 +105,6 @@ ansible --list-hosts webserver
 
 
 
+http://people.redhat.com/mskinner/rhug/q2.2017/Ansible-Hands-on-Introduction.pdf
+
 
