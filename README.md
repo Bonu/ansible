@@ -2,6 +2,20 @@
 Learning Ansible
 ----------------
 
+Topics
+------
+Ansible 
+Playbook
+Modules
+ copy
+ file
+ mysql
+ fact
+templates
+ansible-galaxy
+Roles
+
+
 Setup the infrastructure
 ------------------------
 Usecase: Create a 3 tier application with a load balance, 2 app instances and 1 database.
@@ -103,8 +117,8 @@ ansible --list-hosts webserver
 
 
 
-
-
 http://people.redhat.com/mskinner/rhug/q2.2017/Ansible-Hands-on-Introduction.pdf
 
 ansible-galaxy init test-role-1
+
+defaults are least considered varibles
