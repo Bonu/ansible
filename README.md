@@ -116,9 +116,13 @@ ansible --list-hosts webserver
  ansible -a "service mysql status" db01
 
 
-
-http://people.redhat.com/mskinner/rhug/q2.2017/Ansible-Hands-on-Introduction.pdf
-
 ansible-galaxy init test-role-1
 
 defaults are least considered varibles
+
+References
+----------
+http://people.redhat.com/mskinner/rhug/q2.2017/Ansible-Hands-on-Introduction.pdf
+https://www.ansible.com/hubfs/2018_Content/AA%20BOS%202018%20Slides/Ansible%20Best%20Practices.pdf
+
+
