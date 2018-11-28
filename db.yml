@@ -2,5 +2,6 @@
 ---
 - hosts: database
   become: true
+  gather_facts: false
   roles: 
     - db01 
