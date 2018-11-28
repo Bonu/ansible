@@ -7,7 +7,7 @@
   service: name=nginx state=started enabled=yes      
 
 - name: configure nginx site       
-  template: src=/home/vagrant/ansible/templates/nginx.conf.j2 dest=/etc/nginx/sites-available/myapp mode=0755       
+  template: src=templates/nginx.conf.j2 dest=/etc/nginx/sites-available/myapp mode=0755       
   with_dict: "{{sites}}"
   notify: restart nginx      
 
