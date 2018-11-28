@@ -1,5 +1,5 @@
 ---
-# tasks file for lb0i1
+# tasks file for lb01
 - name: installing nginx       
   apt: name=nginx state=present update_cache=yes      
 
@@ -7,7 +7,7 @@
   service: name=nginx state=started enabled=yes      
 
 - name: configure nginx site       
-  template: src=/home/vagrant/ansible/templates/nginx.conf.j2 dest=/etc/nginx/sites-available/{{item.key}} mode=0644       
+  template: src=/home/vagrant/ansible/templates/nginx.conf.j2 dest=/etc/nginx/sites-available/myapp mode=0755       
   with_dict: "{{sites}}"
   notify: restart nginx      
 
@@ -16,7 +16,7 @@
   notify: restart nginx      
 
 - name: activate demo nginx site       
-  file: src=/etc/nginx/sites-available/{{item.key}} dest=/etc/nginx/sites-enabled/{{item.key}} state=link       
+  file: src=/etc/nginx/sites-available/myapp dest=/etc/nginx/sites-enabled/myapp state=link       
   with_dict: "{{sites}}"
   notify: restart nginx
 
