@@ -1,5 +1,5 @@
 ---
-db_user: "{{ vault_db_user }}" 
-db_pass: "{{ vault_db_pass }}"
-db_name: "{{ vault_db_name }}"
+db_user: demo 
+db_pass: demo
+db_name: demo
 
